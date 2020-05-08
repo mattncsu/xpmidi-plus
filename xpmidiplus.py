@@ -503,6 +503,8 @@ class Application(object):
             files = []
             for f in settings.current_dir:
                 files.extend(glob.glob('%s/*.mid' % f))
+                files.extend(glob.glob('%s/*.MID' % f))
+                files.extend(glob.glob('%s/*.midi' % f))
 
         self.next_file_index = next
 
